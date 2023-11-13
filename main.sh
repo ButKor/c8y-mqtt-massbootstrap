@@ -33,7 +33,6 @@ cat ./runtime/clientIds.json | jq -r '.[] | .mqttClientId' \
     | xargs -I CMD --max-procs=$batchSize bash -c CMD
 
 echo "audit results ..."
-sleep 5
 ./auditResults.sh
 
 exit 0
